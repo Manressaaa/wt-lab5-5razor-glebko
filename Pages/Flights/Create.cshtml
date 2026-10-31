@@ -1,0 +1,65 @@
+@page
+@model wt_lab5_5razor_glebko.Pages.Flights.CreateModel
+@{
+    ViewData["Title"] = "Добавление рейса";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow rounded-4 border-0">
+                <div class="card-body p-4">
+                    <h2 class="mb-4">Добавление рейса</h2>
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Flight.gorod_vilet" class="form-label">Город вылета</label>
+                            <input asp-for="Flight.gorod_vilet" class="form-control" />
+                            <span asp-validation-for="Flight.gorod_vilet" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Flight.gorod_prilet" class="form-label">Город прилёта</label>
+                            <input asp-for="Flight.gorod_prilet" class="form-control" />
+                            <span asp-validation-for="Flight.gorod_prilet" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Flight.vremya_vileta" class="form-label">Время вылета</label>
+                            <input asp-for="Flight.vremya_vileta" type="datetime-local" class="form-control" />
+                            <span asp-validation-for="Flight.vremya_vileta" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Flight.cena" class="form-label">Цена билета</label>
+                            <input asp-for="Flight.cena" class="form-control" />
+                            <span asp-validation-for="Flight.cena" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Flight.mesta" class="form-label">Свободных мест</label>
+                            <input asp-for="Flight.mesta" class="form-control" />
+                            <span asp-validation-for="Flight.mesta" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input asp-for="Flight.dostupno" class="form-check-input" />
+                            <label asp-for="Flight.dostupno" class="form-check-label">
+                                Продажа открыта
+                            </label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                            <a asp-page="/Flights/Index" class="btn btn-secondary">Назад к списку</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
