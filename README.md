@@ -7,4 +7,4 @@
 https://github.com/Manressaaa/wt-lab5-5razor-glebko.git
 
 ## Опубликованное приложение
-(ссылка появится после деплоя)
+https://wt-lab5-5razor-glebko.onrender.com/
